@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tailwind練習中</title>
     <link rel="stylesheet" href="/css/tailwind.css" />
   </head>
-  <body>
-    <h1 class="text-4xl font-bold text-center text-blue-500">Hello World</h1>
-  </body>
+
+  <body class="bg-gray-50">
+    <h1 class="text-4xl font-bold text-center text-blue-500">Hello Tailwind!!</h1>
+ 
+      <!-- ボタン -->
+ <div class="flex justify-center mt-8">
+    <button class="px-6 py-3 bg-indigo-500 text-white rounded shadow">
+      ボタン
+    </button>
+  </div>
+
+  <!-- カード（ここまでが1ブロック） -->
+  <div class="flex justify-center mt-10">
+    <div class="max-w-sm p-6 bg-white rounded-xl shadow-lg">
+      <h2 class="text-xl font-semibold mb-2">カードタイトル</h2>
+      <p class="text-gray-600">ここにカードの説明テキストが入ります。</p>
+      <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+        ボタン
+      </button>
+    </div>
+  </div>  <!-- ★ この位置で flex を閉じる -->
+
+
+<!-- 3カラムレイアウト（別ブロックとして下に来る） -->
+  <div class="grid grid-cols-3 gap-6 p-10 mt-16 max-w-4xl mx-auto">
+    <div class="col-span-2 bg-white p-6 rounded-xl shadow">メイン</div>
+    <div class="bg-white p-6 rounded-xl shadow">サイドバー</div>
+  </div>
+</body>
 </html>
